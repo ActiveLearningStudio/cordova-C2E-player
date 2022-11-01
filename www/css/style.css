@@ -92,7 +92,7 @@ body {
   height: 140px;
 }
 .main-wrapper .container-fluid .my-c2e-card .c2e-card-content .card-image img {
-  width: 165px;
+  width: 100%;
   height: 140px;
 }
 .main-wrapper .container-fluid .my-c2e-card .c2e-card-content .c2e-card-title {
