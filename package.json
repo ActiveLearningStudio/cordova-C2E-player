@@ -17,6 +17,8 @@
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-downloader": "^0.0.4",
     "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
+    "cordova-plugin-wkwebview-file-xhr": "^3.1.0",
     "cordova-plugin-zip": "^3.1.0"
   },
   "cordova": {
@@ -28,7 +30,9 @@
       "cordova-plugin-file": {
         "ANDROIDX_WEBKIT_VERSION": "1.4.0"
       },
-      "cordova-plugin-downloader": {}
+      "cordova-plugin-downloader": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-wkwebview-file-xhr": {}
     }
   }
 }

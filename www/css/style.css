@@ -338,7 +338,7 @@ a {
 }
 
 .page-header {
-  /* background: linear-gradient(91.08deg, #656ee6 -1.85%, #6f85ed 100%); */
+  background: linear-gradient(91.08deg, #656ee6 -1.85%, #6f85ed 100%);
   display: inline-flex;
   width: 100%;
   justify-content: space-between;

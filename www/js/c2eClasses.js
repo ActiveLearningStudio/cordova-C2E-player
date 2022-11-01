@@ -52,7 +52,7 @@ class CourseHtml {
             </div>
             <div class="c2e-card-title">
               <h5>${course.name}</h5>
-            <img src="./img/icons/info.png" width="20" height="20"  class="download-project"/>
+            <img src="./img/icons/info.png" width="20" height="20" />
             </div>
           </div>
         </div>

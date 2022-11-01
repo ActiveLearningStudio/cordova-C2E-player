@@ -37,10 +37,12 @@ function onDeviceReady() {
                   reader.readAsText(file);
                   reader.onloadend = function (evt) {
                     var projectJSON = JSON.parse(evt.target.result);
-                    let imgURL = projectJSON.thumb_url
+                    let imgURL = projectJSON.thumb_url;
                     overview_tab.innerHTML = `${projectJSON.name}`;
                     descriptionTab.innerHTML = `${projectJSON.description}`;
-                    thumb_url.src = imgURL.includes("https://") ? 'img/course-list-img.png' : imgURL;
+                    thumb_url.src = imgURL.includes("https://")
+                      ? "img/course-list-img.png"
+                      : imgURL;
                   };
                 });
               },
@@ -80,8 +82,11 @@ function onDeviceReady() {
                         window.resolveLocalFileSystemURL(
                           allPlaylist.nativeURL,
                           function success(fileEntry) {
-                              let fileName = encodeURIComponent(fileEntry.name);
-                              const activitiesRoute = fileEntry.nativeURL.replace(fileName, "activities");
+                            let fileName = encodeURIComponent(fileEntry.name);
+                            const activitiesRoute = fileEntry.nativeURL.replace(
+                              fileName,
+                              "activities"
+                            );
                             fileEntry.file(
                               function (file) {
                                 var reader = new FileReader();
@@ -89,13 +94,31 @@ function onDeviceReady() {
                                   var playlistJSON = JSON.parse(
                                     evt.target.result
                                   );
-                                  playlistJSON.activities.forEach((activity, key) => {
-                                    let activityRoute = `${activitiesRoute}/${activity.title}/${activity.h5p_content_id}-h5p.json`
-                                    activities.push({key: key, id:`${activity.h5p_content_id}-h5p.json`, path: activityRoute});
-                                  });
-                                  window.requestFileSystem(window.TEMPORARY, 5 * 1024 * 1024, function (fs) {
-                                    createFile(fs.root, "offlineActivitiesCount.json", false, activities);  
-                                  }, onErrorLoadFs = (err) => {console.log(err)});
+                                  playlistJSON.activities.forEach(
+                                    (activity, key) => {
+                                      let activityRoute = `${activitiesRoute}/${activity.title}/${activity.h5p_content_id}-h5p.json`;
+                                      activities.push({
+                                        key: key,
+                                        id: `${activity.h5p_content_id}-h5p.json`,
+                                        path: activityRoute,
+                                      });
+                                    }
+                                  );
+                                  window.requestFileSystem(
+                                    window.TEMPORARY,
+                                    5 * 1024 * 1024,
+                                    function (fs) {
+                                      createFile(
+                                        fs.root,
+                                        "offlineActivitiesCount.json",
+                                        false,
+                                        activities
+                                      );
+                                    },
+                                    (onErrorLoadFs = (err) => {
+                                      console.log(err);
+                                    })
+                                  );
                                   counter++;
                                   offlinePlaylistHTML += `<div class="card">
                                     <div class="card-header" id="faqhead${counter}">
@@ -119,11 +142,12 @@ function onDeviceReady() {
                                     <div class="card-body">
                                         <ul>`;
                                   for (const activity of playlistJSON.activities) {
-                                      let activityRoute = `${activitiesRoute}/${activity.title}/${activity.h5p_content_id}-h5p.json`
+                                    let activityRoute = `${activitiesRoute}/${activity.title}/${activity.h5p_content_id}-h5p.json`;
                                     offlinePlaylistHTML += `
                                     <li class='activities-list-items'>
                                         <a href="offline-activity.html?activityPath=${activityRoute}"><img src="img/Vector.svg" />${activity.title}</a>
                                     </li>`;
+                                    console.log("activityRoute", activityRoute);
                                   }
                                   offlinePlaylistHTML += `</ul> </div> </div>`;
                                   $(".accordion").html(offlinePlaylistHTML);
