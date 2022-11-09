@@ -15,48 +15,38 @@ class CourseHtml {
       //       }
       //     });
       //   });
-      //   this.courseWrapper += `<div class="course-card mb-5">
-      //         <div class="card-head-wrap">
-      //           <img src="${
-      //             course.thumb_url.includes("http")
-      //               ? course.thumb_url
-      //               : imageBaseUrl + "/" + course.thumb_url
-      //           }" />
-      //           <p><a href="playlist.html?projectId=${course.id}">${
-      //     course.name
-      //   }</a></p>
-      //         </div>
-      //         <div class="card-footer-wrap">
-      //           <div class="text-list">
-      //             <ul>
-      //               <li><a href="#">${course.playlist_count} Playlists</a></li>
-      //               <li><a href="#">${course.activities_count} Activities</a></li>
-      //             </ul>
-      //           </div>
-      //           <div class="card-btn">
-      //             <button class="btn green-btn download-project" data-content='${contentId}' data-course='${urls}' name="${
-      //     course.name
-      //   }" id="${course.id}">
-      //               <img src="img/download-vector.svg" /> Download
-      //             </button>
-      //           </div>
-      //         </div>
-      //       </div>`;
-      this.courseWrapper += `
-          <div class="my-c2e-card">
-          <div class="c2e-card-content">
-          <button class="btn green-btn download-project" data-content='${course.zip}'  name="${course.name}" id="${course.id}">download</button>
-            <div class="card-image">
-            <img src="./img/icons/img.png" width="45" height="38" />
-            
-            </div>
-            <div class="c2e-card-title">
-              <h5>${course.name}</h5>
-            <img src="./img/icons/info.png" width="20" height="20" />
-            </div>
-          </div>
-        </div>
-          `;
+      this.courseWrapper = `
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <button class="add-c23-btn download-project" data-content='${course.zip}'  name="${course.name}" id="${course.id}">
+                    Add
+                    <img
+                      src="./img/icons/download-btn-icon.svg"
+                      width="16px"
+                      height="16px"
+                    />
+                  </button>
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">${course.name}</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>`;
+      // this.courseWrapper += `
+      //     <div class="my-c2e-card">
+      //     <div class="c2e-card-content">
+      //     <button class="btn green-btn download-project" data-content='${course.zip}'  name="${course.name}" id="${course.id}">download</button>
+      //       <div class="card-image">
+      //       <img src="./img/icons/img.png" width="45" height="38" />
+
+      //       </div>
+      //       <div class="c2e-card-title">
+      //         <h5>${course.name}</h5>
+      //       <img src="./img/icons/info.png" width="20" height="20" />
+      //       </div>
+      //     </div>
+      //   </div>
+      //     `;
     });
   }
 }

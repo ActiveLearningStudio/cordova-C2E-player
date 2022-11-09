@@ -20,6 +20,13 @@
   </head>
 
   <body>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="loadingmodal"></div>
+        <p>Your project is downloading.Please wait, it will take some time</p>
+      </div>
+    </div>
     <div class="main-wrapper">
       <div class="container-fluid">
         <div class="row">
@@ -48,16 +55,8 @@
                 id="offlineMyc2eContainer"
               ></div> -->
 
-            <div class="my-c2e-cards-wrapper" id="offlineMyc2eContainer">
-              <div class="add-c2e-card">
-                <div class="c2e-card-content" id="add-C2E">
-                  <img src="./img/icons/plus-icon.png" width="20" height="20" />
-                  <p class="mt-1 font-weight-bold">
-                    <a href="addC2E.html">Add C2E</a>
-                  </p>
-                </div>
-              </div>
-              <div class="my-c2e-card">
+            <div class="my-c2e-cards-wrapper" id="online-project-container">
+              <!-- <div class="my-c2e-card">
                 <div class="ellipses-dropdown">
                   <button class="add-c23-btn">
                     Add
@@ -152,23 +151,7 @@
                   <span class="project-heading">C2E #1</span>
                   <span>13 Jan 2023</span>
                 </div>
-              </div>
-              <div class="my-c2e-card">
-                <div class="ellipses-dropdown">
-                  <button class="add-c23-btn">
-                    Add
-                    <img
-                      src="./img/icons/download-btn-icon.svg"
-                      width="16px"
-                      height="16px"
-                    />
-                  </button>
-                </div>
-                <div class="c2e-card-content">
-                  <span class="project-heading">C2E #1</span>
-                  <span>13 Jan 2023</span>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -201,8 +184,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="cordova.js"></script>
-    <!-- <script src="js/offline.project.js"></script> -->
-    <script src="js/myC2E.js"></script>
+    <script src="js/addC2E.js"></script>
     <script src="js/c2eClasses.js"></script>
+    <script src="js/api.js"></script>
   </body>
 </html>

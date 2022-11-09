@@ -111,7 +111,7 @@ body {
   border: none;
 }
 .main-wrapper .c23-bottom-menu {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background: #ffffff;
@@ -152,6 +152,8 @@ body {
   background: #e5eeff;
   border-radius: 4px;
   padding: 4px 8px;
+  border: none;
+  color: #2e68bf;
 }
 .main-wrapper .container-fluid .my-c2e-card .c2e-card-content span {
   font-size: 8px;
