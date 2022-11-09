@@ -23,107 +23,160 @@
     <div class="main-wrapper">
       <div class="container-fluid">
         <div class="row">
-          <div class="page-header">
-            <div class="header-title" onclick="history.back()">
-              <img src="./img/icons/home.png" width="26" height="26" />
-            </div>
+          <div class="col-12">
             <div class="header-menu">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="./img/icons/search.png" width="26" height="26"
-                  /></a>
-                </li>
-              </ul>
+              <img src="./img/icons/menu1.svg" width="24" height="24" />
             </div>
           </div>
           <div class="main-wrap">
-            <div class="">
-              <div class="main-title mb-3">
-                <h4>My C2E's</h4>
-              </div>
-              <!-- <div
+            <div class="main-title mb-5">
+              <h4>Hello,</h4>
+              <h4 style="font-weight: bold !important">Jane Cooper</h4>
+            </div>
+            <div class="project-search">
+              <input name="search" placeholder="Search your c2e..." />
+              <button>
+                <img src="./img/icons/search1.png" width="24" height="24" />
+              </button>
+            </div>
+            <div class="my-c2e-heading mb-1"><h3>My C2E's</h3></div>
+            <div class="c2e-filters">
+              <button class="filter-btn active-filter-btn">All</button
+              ><button class="filter-btn">Due date</button
+              ><button class="filter-btn">Completed</button>
+            </div>
+
+            <!-- <div
                 class="download-projects-list"
                 id="offlineMyc2eContainer"
               ></div> -->
 
-              <div class="my-c2e-cards-wrapper" id="offlineMyc2eContainer">
-                <div class="add-c2e-card">
-                  <div class="c2e-card-content" id="add-C2E">
-                    <img src="./img/icons/plus.png" width="20" height="20" />
-                    <p class="mt-1 font-weight-bold">
-                      <a href="addC2E.html">Add C2E</a>
-                    </p>
-                  </div>
+            <div class="my-c2e-cards-wrapper" id="offlineMyc2eContainer">
+              <div class="add-c2e-card">
+                <div class="c2e-card-content" id="add-C2E">
+                  <img src="./img/icons/plus-icon.png" width="20" height="20" />
+                  <p class="mt-1 font-weight-bold">
+                    <a href="addC2E.html">Add C2E</a>
+                  </p>
                 </div>
-                <!-- <div class="my-c2e-card">
-                  <div class="c2e-card-content">
-                    <div class="card-image">
-                      <img src="./img/icons/img.png" width="45" height="38" />
-                    </div>
-                    <div class="c2e-card-title">
-                      <h5>Activity</h5>
-                      <img src="./img/icons/info.png" width="20" height="20" />
-                    </div>
-                  </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
                 </div>
-                <div class="my-c2e-card">
-                  <div class="c2e-card-content">
-                    <div class="card-image">
-                      <img src="./img/icons/img.png" width="45" height="38" />
-                    </div>
-                    <div class="c2e-card-title">
-                      <h5>Activity</h5>
-                      <img src="./img/icons/info.png" width="20" height="20" />
-                    </div>
-                  </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
                 </div>
-                <div class="my-c2e-card">
-                  <div class="c2e-card-content">
-                    <div class="card-image">
-                      <img src="./img/icons/img.png" width="45" height="38" />
-                    </div>
-                    <div class="c2e-card-title">
-                      <h5>Activity</h5>
-                      <img src="./img/icons/info.png" width="20" height="20" />
-                    </div>
-                  </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
                 </div>
-                <div class="my-c2e-card">
-                  <div class="c2e-card-content">
-                    <div class="card-image">
-                      <img src="./img/icons/img.png" width="45" height="38" />
-                    </div>
-                    <div class="c2e-card-title">
-                      <h5>Activity</h5>
-                      <img src="./img/icons/info.png" width="20" height="20" />
-                    </div>
-                  </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
                 </div>
-                <div class="my-c2e-card">
-                  <div class="c2e-card-content">
-                    <div class="card-image">
-                      <img src="./img/icons/img.png" width="45" height="38" />
-                    </div>
-                    <div class="c2e-card-title">
-                      <h5>Activity</h5>
-                      <img src="./img/icons/info.png" width="20" height="20" />
-                    </div>
-                  </div>
-                </div> -->
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>
+              <div class="my-c2e-card">
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">C2E #1</span>
+                  <span>13 Jan 2023</span>
+                </div>
               </div>
             </div>
           </div>
-          <!-- <div class="col-12">
-            <div class="alert-message-box">
-              <div class="alert-wrap update">
-                <div class="alert-icon" onclick="window.location.reload()">
-                  <img src="img/update-icon.svg" /> Update
-                </div>
-              </div>
-            </div>
-          </div> -->
+
           <div class="col-12 remove-course-alert"></div>
+        </div>
+      </div>
+      <div class="c23-bottom-menu">
+        <div class="menu-list">
+          <ul>
+            <li class="active-list">
+              <a href="#"
+                ><img
+                  src="./img/icons/home-menu-icon.svg"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./img/icons/search-menu-icon.svg"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

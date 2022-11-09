@@ -167,53 +167,38 @@ class DownloadCourseHtml {
         reader.onloadend = function (evt) {
           let projectJSON = JSON.parse(evt.target.result);
           let imgURL = projectJSON.thumb_url;
-          // this.offlineProjectHTML = `
-          //     <div class="course-card">
-          //         <div class="card-head-wrap">
-          // <img src="${
-          //   imgURL.includes("https://")
-          //     ? "img/course-main-img.png"
-          //     : imgURL
-          // }">
-          //             <p style="background:transparent !important">
-          //                 <a href="offline-playlist.html?playlistPath=${path}">${
-          //   projectJSON.name
-          // }</a>
-          //             </p>
-          //         </div>
-          //         <div class="card-footer-wrap">
-          //             <div class="text-list">
-          //                 <ul>
-          //                     <li><a href="#">${
-          //                       projectJSON.playlist_count
-          //                     } Playlists</a></li>
-          //                     <li><a href="#">${
-          //                       projectJSON.activities_count
-          //                     } Activities</a></li>
-          //                 </ul>
-          //             </div>
-          //             <div class="card-btn">
-          //                 <button class="btn transparent-red-btn remove-project" id="${path}"><img src="img/delete-btn.svg"> Remove</button>
-          //             </div>
-          //         </div>
-          //     </div>`;
+
+          //   this.offlineProjectHTML = `
+          //   <div class="my-c2e-card">
+          //   <div class="c2e-card-content">
+          //     <div class="card-image">
+          //     <img src="${
+          //       imgURL.includes("https://") ? "img/course-main-img.png" : imgURL
+          //     }">
+          //     </div>
+          //     <div class="c2e-card-title">
+          //       <h5><a href="offline-playlist.html?playlistPath=${path}">${
+          //     projectJSON.name
+          //   }</a></h5>
+          //       <img src="./img/icons/info.png" width="20" height="20" />
+          //     </div>
+          //   </div>
+          // </div>
+          //   `;
           this.offlineProjectHTML = `
           <div class="my-c2e-card">
-          <div class="c2e-card-content">
-            <div class="card-image">
-            <img src="${
-              imgURL.includes("https://") ? "img/course-main-img.png" : imgURL
-            }">
-            </div>
-            <div class="c2e-card-title">
-              <h5><a href="offline-playlist.html?playlistPath=${path}">${
-            projectJSON.name
-          }</a></h5>
-              <img src="./img/icons/info.png" width="20" height="20" />
-            </div>
-          </div>
-        </div>
-          `;
+                <div class="ellipses-dropdown">
+                  <img
+                    src="./img/icons/ellipse-icon.svg"
+                    width="16px"
+                    height="16px"
+                  />
+                </div>
+                <div class="c2e-card-content">
+                  <span class="project-heading">${projectJSON.name}</span>
+                  <span>13 Jan 2023</span>
+                </div>
+              </div>`;
           offlineHtml(this.offlineProjectHTML);
         };
       });

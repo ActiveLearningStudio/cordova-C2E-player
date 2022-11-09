@@ -66,6 +66,30 @@ body {
   margin-bottom:20px;
   padding: 16px 0px;
 } */
+.main-title h4 {
+  font-weight: 500 !important;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2e68bf;
+}
+.container-fluid .form-outer .login-to-account {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #515151;
+}
+
+.container-fluid .form-outer .remember-me {
+  display: flex;
+  align-items: center;
+}
+.container-fluid .form-outer .forget-password {
+  margin-bottom: 100px;
+}
+.container-fluid .form-outer .remember-me input {
+  margin-top: -8px;
+  margin-right: 10px;
+}
 .paghe-header .c2e-header-icon img {
   width: 26px;
   height: 26px;
@@ -77,16 +101,116 @@ body {
   flex-wrap: wrap;
 }
 .main-wrapper .container-fluid .add-c2e-card {
-  border: 2px solid #1a1a1a;
   width: 48%;
-  padding: 50px 50px;
+  padding: 20px;
   margin-bottom: 20px;
   text-align: center;
+  background: #e5eeff;
+  border-radius: 12px;
+  height: 96px;
+  border: none;
+}
+.main-wrapper .c23-bottom-menu {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 8px 32px 4px rgb(8 72 146 / 16%);
+  border-radius: 16px 16px 0px 0px;
+  padding: 19px 32px;
+}
+.main-wrapper .c23-bottom-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px !important;
+  padding: 0px;
+}
+.main-wrapper .c23-bottom-menu ul li {
+  list-style-type: none;
+  margin-right: 29px;
+  margin-left: 24px;
+}
+.main-wrapper .c23-bottom-menu ul li.active-list {
+  background: #e5eeff;
+  box-shadow: 0px 0px 16px 5px rgba(46, 141, 245, 0.24);
+  border-radius: 20px;
+}
+.main-wrapper .container-fluid .my-c2e-card .c2e-card-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  bottom: 0px;
+}
+.main-wrapper .container-fluid .my-c2e-card .ellipses-dropdown {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+}
+.main-wrapper .container-fluid .my-c2e-card .ellipses-dropdown .add-c23-btn {
+  background: #e5eeff;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.main-wrapper .container-fluid .my-c2e-card .c2e-card-content span {
+  font-size: 8px;
+  color: #ffffff;
+}
+.main-wrapper .container-fluid .my-c2e-card .c2e-card-content .project-heading {
+  font-size: 14px;
+  color: #ffffff;
+}
+.main-wrapper .container-fluid .main-wrap .project-search input {
+  width: 275px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #959595;
+  border-radius: 12px;
+  padding: 10px;
+}
+.main-wrapper .container-fluid .main-wrap .project-search button {
+  background: #2e68bf;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-left: 14px;
+  height: 48px;
+  border: none;
+}
+.main-wrapper .container-fluid .main-wrap .project-search {
+  margin-bottom: 32px;
+}
+.main-wrapper .container-fluid .main-wrap .my-c2e-heading h3 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #515151;
+}
+.main-wrapper .container-fluid .c2e-filters {
+  margin-bottom: 12px;
+}
+.main-wrapper .container-fluid .c2e-filters .active-filter-btn {
+  background: #2e68bf !important;
+  color: #ffffff !important;
+}
+.main-wrapper .container-fluid .c2e-filters .filter-btn {
+  background: #f1f1f1;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-right: 16px;
+  border: none;
+  color: #959595;
 }
 .main-wrapper .container-fluid .my-c2e-card {
-  border: 2px solid #1a1a1a;
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    url(../img/projectimg.png);
+  border-radius: 12px;
   width: 48%;
-  margin-bottom: 20px;
+  height: 96px;
+  margin-bottom: 12px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-wrapper .container-fluid .my-c2e-card .c2e-card-content .card-image {
   height: 140px;
@@ -106,7 +230,7 @@ body {
 }
 
 .main-title h4 {
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0;
 }
 .form-outer {
@@ -145,13 +269,13 @@ h5 {
 
 .floating-label-group {
   position: relative;
-  margin-top: 0;
-  margin-bottom: 44px;
+  /* margin-top: 0;
+  margin-bottom: 44px; */
 }
 .floating-label-group .floating-label {
   position: absolute;
   pointer-events: none;
-  top: 14px;
+  top: 16px;
   left: 18px;
   transition: all 0.1s ease;
   font-style: normal;
@@ -189,12 +313,13 @@ h5 {
   background: #ffffff;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 12px;
   height: 48px;
+  padding-left: 34px;
 }
 .primary-btn {
-  background: linear-gradient(91.08deg, #656ee6 -1.85%, #6f85ed 100%);
-  border-radius: 4px;
+  background: #2e68bf;
+  border-radius: 12px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -243,14 +368,14 @@ h5 {
 }
 .reset-text span {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  text-align: left;
-  color: #3f53d9;
+  text-align: center;
+  color: #2e68bf;
 }
 .reset-text {
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
 }
 body input:-webkit-autofill {
@@ -258,10 +383,10 @@ body input:-webkit-autofill {
 }
 .username-field:after {
   content: "";
-  background-image: url(../img/username-icon.svg);
+  background-image: url(../img/icons/email1.svg);
   position: absolute;
-  right: 13px;
-  top: 14px;
+  left: 12px;
+  top: 16px;
   width: 18px;
   height: 20.12px;
   object-fit: contain;
@@ -269,7 +394,18 @@ body input:-webkit-autofill {
 }
 .password-field:after {
   content: "";
-  background-image: url(../img/Password.svg);
+  background-image: url(../img/icons/password-lock.svg);
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  width: 18px;
+  height: 20.12px;
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
+/* .password-field:after {
+  content: "";
+  background-image: url(../img/icons/show-password.svg);
   position: absolute;
   right: 13px;
   top: 14px;
@@ -277,7 +413,7 @@ body input:-webkit-autofill {
   height: 20.12px;
   object-fit: contain;
   background-repeat: no-repeat;
-}
+} */
 .error-message h6 {
   font-family: Open Sans;
   font-style: italic;
@@ -336,7 +472,6 @@ a {
   outline: none !important;
   box-shadow: none !important;
 }
-
 .page-header {
   background: linear-gradient(91.08deg, #656ee6 -1.85%, #6f85ed 100%);
   display: inline-flex;
@@ -355,6 +490,8 @@ a {
 }
 .header-menu {
   display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .header-menu ul {
   padding-left: 0;

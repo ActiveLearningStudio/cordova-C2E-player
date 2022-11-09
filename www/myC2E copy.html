@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https: cdvfile:; 
+            style-src 'self' https: 'unsafe-inline'; media-src *; img-src 'self' data: content: cdvfile:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>My C2E's</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="page-header">
+            <div class="header-title" onclick="history.back()">
+              <img src="./img/icons/home.png" width="26" height="26" />
+            </div>
+            <div class="header-menu">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="./img/icons/search.png" width="26" height="26"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-wrap">
+            <div class="">
+              <div class="main-title mb-3">
+                <h4>My C2E's</h4>
+              </div>
+              <!-- <div
+                class="download-projects-list"
+                id="offlineMyc2eContainer"
+              ></div> -->
+
+              <div class="my-c2e-cards-wrapper" id="offlineMyc2eContainer">
+                <div class="add-c2e-card">
+                  <div class="c2e-card-content" id="add-C2E">
+                    <img src="./img/icons/plus.png" width="20" height="20" />
+                    <p class="mt-1 font-weight-bold">
+                      <a href="addC2E.html">Add C2E</a>
+                    </p>
+                  </div>
+                </div>
+                <!-- <div class="my-c2e-card">
+                  <div class="c2e-card-content">
+                    <div class="card-image">
+                      <img src="./img/icons/img.png" width="45" height="38" />
+                    </div>
+                    <div class="c2e-card-title">
+                      <h5>Activity</h5>
+                      <img src="./img/icons/info.png" width="20" height="20" />
+                    </div>
+                  </div>
+                </div>
+                <div class="my-c2e-card">
+                  <div class="c2e-card-content">
+                    <div class="card-image">
+                      <img src="./img/icons/img.png" width="45" height="38" />
+                    </div>
+                    <div class="c2e-card-title">
+                      <h5>Activity</h5>
+                      <img src="./img/icons/info.png" width="20" height="20" />
+                    </div>
+                  </div>
+                </div>
+                <div class="my-c2e-card">
+                  <div class="c2e-card-content">
+                    <div class="card-image">
+                      <img src="./img/icons/img.png" width="45" height="38" />
+                    </div>
+                    <div class="c2e-card-title">
+                      <h5>Activity</h5>
+                      <img src="./img/icons/info.png" width="20" height="20" />
+                    </div>
+                  </div>
+                </div>
+                <div class="my-c2e-card">
+                  <div class="c2e-card-content">
+                    <div class="card-image">
+                      <img src="./img/icons/img.png" width="45" height="38" />
+                    </div>
+                    <div class="c2e-card-title">
+                      <h5>Activity</h5>
+                      <img src="./img/icons/info.png" width="20" height="20" />
+                    </div>
+                  </div>
+                </div>
+                <div class="my-c2e-card">
+                  <div class="c2e-card-content">
+                    <div class="card-image">
+                      <img src="./img/icons/img.png" width="45" height="38" />
+                    </div>
+                    <div class="c2e-card-title">
+                      <h5>Activity</h5>
+                      <img src="./img/icons/info.png" width="20" height="20" />
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+            <div class="alert-message-box">
+              <div class="alert-wrap update">
+                <div class="alert-icon" onclick="window.location.reload()">
+                  <img src="img/update-icon.svg" /> Update
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-12 remove-course-alert"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="cordova.js"></script>
+    <!-- <script src="js/offline.project.js"></script> -->
+    <script src="js/myC2E.js"></script>
+    <script src="js/c2eClasses.js"></script>
+  </body>
+</html>
