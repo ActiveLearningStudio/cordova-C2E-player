@@ -151,7 +151,7 @@ body {
 .main-wrapper .container-fluid .my-c2e-card .ellipses-dropdown .add-c23-btn {
   background: #e5eeff;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 2px 6px;
   border: none;
   color: #2e68bf;
 }
@@ -162,9 +162,13 @@ body {
 .main-wrapper .container-fluid .my-c2e-card .c2e-card-content .project-heading {
   font-size: 14px;
   color: #ffffff;
+  white-space: nowrap;
+  width: 124px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-wrapper .container-fluid .main-wrap .project-search input {
-  width: 275px;
+  width: 263px;
   height: 48px;
   background: #ffffff;
   border: 1px solid #959595;
@@ -196,8 +200,9 @@ body {
 }
 .main-wrapper .container-fluid .c2e-filters .filter-btn {
   background: #f1f1f1;
+  height: 32px;
   border-radius: 16px;
-  padding: 8px 16px;
+  padding: 4px 16px;
   margin-right: 16px;
   border: none;
   color: #959595;
@@ -493,7 +498,7 @@ a {
 .header-menu {
   display: inline-block;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .header-menu ul {
   padding-left: 0;
@@ -644,27 +649,42 @@ a {
 }
 .thumb-content p {
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 22px;
-  color: #515151;
+  color: #2e68bf;
   margin-bottom: 12px;
 }
 .thumb-content img {
   width: 100%;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
 }
 .tab-content .nav-tabs {
   border: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f1f1;
   margin-bottom: 16px;
 }
 .tab-content .nav-tabs li {
   width: 50%;
 }
 .tab-content .nav-tabs a.active {
-  background: linear-gradient(91.08deg, #656ee6 -1.85%, #6f85ed 100%);
-  border-radius: 4px;
-  border: 0;
   color: #fff;
+  background: #2e68bf;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-weight: 400;
+  border: 0;
+  text-align: center;
+}
+.tab-content .tab-content #main .playlist-head {
+  color: #2e68bf;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 2px solid #f8af2c;
+  width: 67px;
 }
 .tab-content .nav-tabs li:last-child a {
   margin-right: 0;
@@ -673,22 +693,31 @@ a {
   margin-right: 8px;
 }
 .tab-content .nav-tabs a {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  color: #515151;
-  background: #eef2fc;
-  border-radius: 4px;
+  background: #f1f1f1;
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: #959595;
+  font-weight: 400;
   border: 0;
-  padding: 14px 0;
+  font-size: 14px;
+  text-align: center;
 }
 .tab-content .overview-description {
-  background: #f9f9fb;
-  border-radius: 4px;
-  padding: 21px 30px 14px 30px;
   margin-bottom: 9px;
+}
+.tab-content .overview-description h4 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #2e68bf;
+}
+.tab-content .overview-description p {
+  font-family: "Open Sans";
+  font-style: normal;
+  color: #515151;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
 }
 .course-detail-wrap {
   padding-bottom: 113px;
@@ -711,27 +740,29 @@ a {
   color: #515151;
 }
 .accordion .card {
-  background: #eef2fc;
+  /* background: #eef2fc; */
   border-radius: 4px;
   border: 0;
   margin-bottom: 8px;
 }
 .accordion .card .card-header {
-  border-bottom: 1px solid #d8e3ff;
-  background: transparent;
-  padding: 17px 20px 19px 20px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 1px rgba(8, 72, 146, 0.16);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 8px;
 }
 .accordion .card .card-header a.btn-header-link {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  color: #515151;
+  font-size: 12px;
+  line-height: 20px;
   text-align: left;
   padding: 0;
   padding-right: 125px;
   position: relative;
   width: 100%;
+  color: #2e68bf;
 }
 #main #faq .card .card-header .btn-header-link:after {
   background-image: url(../img/top-vector.svg);
@@ -752,9 +783,18 @@ a {
   padding-left: 0;
   margin-bottom: 0;
 }
+.accordion .card .card-body {
+  padding: 0px !important;
+}
 .accordion .card .card-body ul li {
   list-style-type: none;
   padding-bottom: 17px;
+  background: #ffffff;
+  border: 1px solid #959595;
+  border-radius: 4px;
+  padding: 10px;
+  height: 48px;
+  margin-bottom: 4px;
 }
 .accordion .card .card-body ul li img {
   padding-right: 12px;

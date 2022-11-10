@@ -15,7 +15,7 @@ class CourseHtml {
       //       }
       //     });
       //   });
-      this.courseWrapper = `
+      this.courseWrapper += `
               <div class="my-c2e-card">
                 <div class="ellipses-dropdown">
                   <button class="add-c23-btn download-project" data-content='${course.zip}'  name="${course.name}" id="${course.id}">
@@ -29,7 +29,7 @@ class CourseHtml {
                 </div>
                 <div class="c2e-card-content">
                   <span class="project-heading">${course.name}</span>
-                  <span>13 Jan 2023</span>
+                  <span>${course.created_at}</span>
                 </div>
               </div>`;
       // this.courseWrapper += `
@@ -158,7 +158,7 @@ class DownloadCourseHtml {
           let projectJSON = JSON.parse(evt.target.result);
           let imgURL = projectJSON.thumb_url;
 
-          //   this.offlineProjectHTML = `
+          // this.offlineProjectHTML = `
           //   <div class="my-c2e-card">
           //   <div class="c2e-card-content">
           //     <div class="card-image">
@@ -168,8 +168,8 @@ class DownloadCourseHtml {
           //     </div>
           //     <div class="c2e-card-title">
           //       <h5><a href="offline-playlist.html?playlistPath=${path}">${
-          //     projectJSON.name
-          //   }</a></h5>
+          //   projectJSON.name
+          // }</a></h5>
           //       <img src="./img/icons/info.png" width="20" height="20" />
           //     </div>
           //   </div>
@@ -185,7 +185,7 @@ class DownloadCourseHtml {
                   />
                 </div>
                 <div class="c2e-card-content">
-                  <span class="project-heading">${projectJSON.name}</span>
+                 <a class="project-heading" href="offline-playlist.html?playlistPath=${path}">${projectJSON.name}</a>
                   <span>13 Jan 2023</span>
                 </div>
               </div>`;
@@ -250,7 +250,7 @@ class DownloadCourseAlertHtml extends AlertHeader {
         <p>
           The course has been downloaded please check in the downloaded courses section
         </p>
-        <button class="btn primary-btn" onclick="window.location.reload()">
+        <button class="btn primary-btn" onclick="window.location='myC2E.html'">
           I Understand
         </button>
       </div>
