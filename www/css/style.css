@@ -188,6 +188,8 @@ a {
 }
 .main-wrapper .container-fluid .main-wrap .project-search {
   margin-bottom: 32px;
+  display: flex;
+  align-items: center;
 }
 .main-wrapper .container-fluid .main-wrap .my-c2e-heading h3 {
   font-size: 18px;
