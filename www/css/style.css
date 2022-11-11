@@ -56,6 +56,9 @@
 body {
   font-family: Rubik;
 }
+a {
+  text-decoration: none;
+}
 .main-wrapper .top-space-fluid {
   height: 200px;
   background-color: #e6e6e6;
@@ -209,8 +212,7 @@ body {
 }
 .main-wrapper .container-fluid .my-c2e-card {
   position: relative;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
-    url(../img/projectimg.png);
+
   border-radius: 12px;
   width: 48%;
   height: 96px;
@@ -659,6 +661,8 @@ a {
   width: 100%;
   border: 1px solid #f1f1f1;
   border-radius: 5px;
+  width: 100%;
+  height: 200px;
 }
 .tab-content .nav-tabs {
   border: 0;
@@ -913,9 +917,10 @@ a {
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 24px;
-  color: #515151;
+  color: #767676;
+  font-weight: 400;
 }
 
 .confirm-remove-btn {

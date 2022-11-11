@@ -15,10 +15,17 @@ class CourseHtml {
       //       }
       //     });
       //   });
+      let imgURL = course.thumb_url;
       this.courseWrapper += `
-              <div class="my-c2e-card">
+               <div class="my-c2e-card" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+                url(${
+                  imgURL.includes("https://") ? imgURL : "./img/projectimg.png"
+                });background-repeat: no-repeat;
+                background-size: cover;">
                 <div class="ellipses-dropdown">
-                  <button class="add-c23-btn download-project" data-content='${course.zip}'  name="${course.name}" id="${course.id}">
+                  <button class="add-c23-btn download-project" data-content='${
+                    course.zip
+                  }'  name="${course.name}" id="${course.id}">
                     Add
                     <img
                       src="./img/icons/download-btn-icon.svg"
@@ -29,7 +36,15 @@ class CourseHtml {
                 </div>
                 <div class="c2e-card-content">
                   <span class="project-heading">${course.name}</span>
-                  <span>${course.created_at}</span>
+                  <span>${
+                    new Date(course.created_at).getDate() +
+                    " " +
+                    new Date(course.created_at).toLocaleString("default", {
+                      month: "long",
+                    }) +
+                    " " +
+                    new Date(course.created_at).getFullYear()
+                  }</span>
                 </div>
               </div>`;
       // this.courseWrapper += `
@@ -157,7 +172,7 @@ class DownloadCourseHtml {
         reader.onloadend = function (evt) {
           let projectJSON = JSON.parse(evt.target.result);
           let imgURL = projectJSON.thumb_url;
-
+          console.log("projectjson", projectJSON);
           // this.offlineProjectHTML = `
           //   <div class="my-c2e-card">
           //   <div class="c2e-card-content">
@@ -176,7 +191,11 @@ class DownloadCourseHtml {
           // </div>
           //   `;
           this.offlineProjectHTML = `
-          <div class="my-c2e-card">
+          <div class="my-c2e-card" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+          url(${
+            imgURL.includes("https://") ? imgURL : "./img/projectimg.png"
+          });background-repeat: no-repeat;
+          background-size: cover;">
                 <div class="ellipses-dropdown">
                   <img
                     src="./img/icons/ellipse-icon.svg"
@@ -185,8 +204,18 @@ class DownloadCourseHtml {
                   />
                 </div>
                 <div class="c2e-card-content">
-                 <a class="project-heading" href="offline-playlist.html?playlistPath=${path}">${projectJSON.name}</a>
-                  <span>13 Jan 2023</span>
+                 <a class="project-heading" href="offline-playlist.html?playlistPath=${path}">${
+            projectJSON.name
+          }</a>
+                  <span>${
+                    new Date(projectJSON.created_at).getDate() +
+                    " " +
+                    new Date(projectJSON.created_at).toLocaleString("default", {
+                      month: "long",
+                    }) +
+                    " " +
+                    new Date(projectJSON.created_at).getFullYear()
+                  }</span>
                 </div>
               </div>`;
           offlineHtml(this.offlineProjectHTML);

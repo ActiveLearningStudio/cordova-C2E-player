@@ -12,6 +12,7 @@ function onDeviceReady() {
   const overview_tab = document.getElementById("course-title");
   const descriptionTab = document.getElementById("course-description");
   const thumb_url = document.getElementById("course-image");
+  const author_name = document.getElementById("author-name");
 
   courseId = getUrlParams.get("courseId");
   localStorage.setItem("activeOfflineCourse", courseId);
@@ -41,8 +42,9 @@ function onDeviceReady() {
                     overview_tab.innerHTML = `${projectJSON.name}`;
                     descriptionTab.innerHTML = `${projectJSON.description}`;
                     thumb_url.src = imgURL.includes("https://")
-                      ? "img/course-list-img.png"
-                      : imgURL;
+                      ? imgURL + "!important"
+                      : "img/course-list-img.png";
+                    author_name.innerHTML = "Mike";
                   };
                 });
               },
@@ -148,6 +150,9 @@ function onDeviceReady() {
                                         <a href="offline-activity.html?activityPath=${activityRoute}"><img src="img/Vector.svg" />${activity.title}</a>
                                     </li>`;
                                     console.log("activityRoute", activityRoute);
+                                  }
+                                  if (playlistJSON.activities.length === 0) {
+                                    offlinePlaylistHTML += `<li class='activities-list-items'><a>No Activity Found</a></li>`;
                                   }
                                   offlinePlaylistHTML += `</ul> </div> </div>`;
                                   $(".accordion").html(offlinePlaylistHTML);
