@@ -39,12 +39,13 @@ function onDeviceReady() {
                   reader.onloadend = function (evt) {
                     var projectJSON = JSON.parse(evt.target.result);
                     let imgURL = projectJSON.thumb_url;
+                    console.log("projectJSON", projectJSON);
                     overview_tab.innerHTML = `${projectJSON.name}`;
                     descriptionTab.innerHTML = `${projectJSON.description}`;
                     thumb_url.src = imgURL.includes("https://")
                       ? imgURL + "!important"
                       : "img/course-list-img.png";
-                    author_name.innerHTML = "Mike";
+                    author_name.innerHTML = "Mike Test";
                   };
                 });
               },
