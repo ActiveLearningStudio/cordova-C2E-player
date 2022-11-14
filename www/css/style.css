@@ -154,6 +154,7 @@ a {
 .main-wrapper .container-fluid .my-c2e-card .ellipses-dropdown .add-c23-btn {
   background: #e5eeff;
   border-radius: 4px;
+  font-size: 12px;
   padding: 2px 6px;
   border: none;
   color: #2e68bf;
@@ -169,8 +170,10 @@ a {
   width: 124px;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
 }
 .main-wrapper .container-fluid .main-wrap .project-search input {
+  font-family: Open Sans;
   width: 263px;
   height: 48px;
   background: #ffffff;
@@ -206,6 +209,7 @@ a {
 .main-wrapper .container-fluid .c2e-filters .filter-btn {
   background: #f1f1f1;
   height: 32px;
+  font-size: 14px;
   border-radius: 16px;
   padding: 4px 16px;
   margin-right: 16px;
@@ -235,9 +239,10 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 4px 6px 0px 6px;
-}
-.main-wrapper .container-fluid .my-c2e-card .c2e-card-content .c2e-card-title {
   font-weight: bold;
+}
+.main-wrapper .container-fluid .add-c2e-card .c2e-card-content .add-c2e-text {
+  font-size: 14px;
 }
 
 .main-title h4 {
@@ -321,6 +326,7 @@ h5 {
 }
 
 .floating-label-group input {
+  font-family: Open Sans;
   background: #ffffff;
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
@@ -477,7 +483,7 @@ body input:-webkit-autofill {
   width: 230px;
 }
 a {
-  color: #656ee6;
+  color: #2e68bf;
 }
 .btn:focus {
   outline: none !important;
@@ -760,7 +766,7 @@ a {
 }
 .accordion .card .card-header a.btn-header-link {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   line-height: 20px;
   text-align: left;
@@ -804,6 +810,8 @@ a {
 }
 .accordion .card .card-body ul li img {
   padding-right: 12px;
+  width: 32px;
+  height: 18px;
 }
 
 /* remove button css*/

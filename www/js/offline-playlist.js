@@ -148,9 +148,13 @@ function onDeviceReady() {
                                     let activityRoute = `${activitiesRoute}/${activity.title}/${activity.h5p_content_id}-h5p.json`;
                                     offlinePlaylistHTML += `
                                     <li class='activities-list-items'>
-                                        <a href="offline-activity.html?activityPath=${activityRoute}"><img src="img/Vector.svg" />${activity.title}</a>
+                                        <a href="offline-activity.html?activityPath=${activityRoute}"><img src=${
+                                      activity.thumb_url.includes("https://")
+                                        ? activity.thumb_url
+                                        : "img/Vector.svg"
+                                    }  />${activity.title}</a>
                                     </li>`;
-                                    console.log("activityRoute", activityRoute);
+                                    console.log("activity", activity);
                                   }
                                   if (playlistJSON.activities.length === 0) {
                                     offlinePlaylistHTML += `<li class='activities-list-items'><a>No Activity Found</a></li>`;
